@@ -8,12 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		36C876D52B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C876D42B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift */; };
-		36C876D72B2A68E00020AA76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C876D62B2A68E00020AA76 /* ContentView.swift */; };
 		36C876D92B2A68E10020AA76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C876D82B2A68E10020AA76 /* Assets.xcassets */; };
 		36C876DC2B2A68E10020AA76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C876DB2B2A68E10020AA76 /* Preview Assets.xcassets */; };
 		36C876E62B2A68E10020AA76 /* Rick_and_Morty_VASSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C876E52B2A68E10020AA76 /* Rick_and_Morty_VASSTests.swift */; };
 		36C876F02B2A68E10020AA76 /* Rick_and_Morty_VASSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C876EF2B2A68E10020AA76 /* Rick_and_Morty_VASSUITests.swift */; };
 		36C876F22B2A68E10020AA76 /* Rick_and_Morty_VASSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C876F12B2A68E10020AA76 /* Rick_and_Morty_VASSUITestsLaunchTests.swift */; };
+		36C877092B2A6BA40020AA76 /* URLSessionRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877082B2A6BA40020AA76 /* URLSessionRequestMaker.swift */; };
+		36C877132B2A6DA00020AA76 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877122B2A6DA00020AA76 /* Endpoint.swift */; };
+		36C877152B2A6DDA0020AA76 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877142B2A6DDA0020AA76 /* HTTPMethod.swift */; };
+		36C877172B2A6DFC0020AA76 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877162B2A6DFC0020AA76 /* HTTPClientError.swift */; };
+		36C877192B2A6EB60020AA76 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877182B2A6EB60020AA76 /* URLSessionHTTPClient.swift */; };
+		36C8771B2B2A6EF40020AA76 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8771A2B2A6EF40020AA76 /* HTTPClient.swift */; };
+		36C8771D2B2A6F7A0020AA76 /* APICharactersListDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8771C2B2A6F7A0020AA76 /* APICharactersListDataSourceType.swift */; };
+		36C8771F2B2A6F820020AA76 /* APICharactersListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8771E2B2A6F820020AA76 /* APICharactersListDataSource.swift */; };
+		36C877212B2A6FCE0020AA76 /* CharactersListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877202B2A6FCE0020AA76 /* CharactersListResponse.swift */; };
+		36C877232B2A72410020AA76 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877222B2A72410020AA76 /* Foundation+Extension.swift */; };
+		36C877262B2A730A0020AA76 /* CharacterListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877252B2A730A0020AA76 /* CharacterListRepository.swift */; };
+		36C877282B2A731C0020AA76 /* CharacterListDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877272B2A731C0020AA76 /* CharacterListDomainErrorMapper.swift */; };
+		36C8772A2B2A735D0020AA76 /* CharacterListDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877292B2A735D0020AA76 /* CharacterListDomainError.swift */; };
+		36C8772C2B2A74220020AA76 /* CharacterListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8772B2B2A74220020AA76 /* CharacterListRepositoryType.swift */; };
+		36C8772E2B2A751B0020AA76 /* CharacterListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C8772D2B2A751B0020AA76 /* CharacterListUseCase.swift */; };
+		36C877312B2A75EF0020AA76 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877302B2A75EF0020AA76 /* CharacterListView.swift */; };
+		36C877332B2A76020020AA76 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877322B2A76020020AA76 /* CharacterListViewModel.swift */; };
+		36C877352B2A781A0020AA76 /* CharacterListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C877342B2A781A0020AA76 /* CharacterListFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +53,6 @@
 /* Begin PBXFileReference section */
 		36C876D12B2A68E00020AA76 /* Rick-and-Morty-VASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick-and-Morty-VASS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C876D42B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_and_Morty_VASSApp.swift; sourceTree = "<group>"; };
-		36C876D62B2A68E00020AA76 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		36C876D82B2A68E10020AA76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36C876DB2B2A68E10020AA76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36C876E12B2A68E10020AA76 /* Rick-and-Morty-VASSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rick-and-Morty-VASSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +60,24 @@
 		36C876EB2B2A68E10020AA76 /* Rick-and-Morty-VASSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rick-and-Morty-VASSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C876EF2B2A68E10020AA76 /* Rick_and_Morty_VASSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_and_Morty_VASSUITests.swift; sourceTree = "<group>"; };
 		36C876F12B2A68E10020AA76 /* Rick_and_Morty_VASSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_and_Morty_VASSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36C877082B2A6BA40020AA76 /* URLSessionRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequestMaker.swift; sourceTree = "<group>"; };
+		36C877122B2A6DA00020AA76 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		36C877142B2A6DDA0020AA76 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		36C877162B2A6DFC0020AA76 /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
+		36C877182B2A6EB60020AA76 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		36C8771A2B2A6EF40020AA76 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		36C8771C2B2A6F7A0020AA76 /* APICharactersListDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICharactersListDataSourceType.swift; sourceTree = "<group>"; };
+		36C8771E2B2A6F820020AA76 /* APICharactersListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICharactersListDataSource.swift; sourceTree = "<group>"; };
+		36C877202B2A6FCE0020AA76 /* CharactersListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListResponse.swift; sourceTree = "<group>"; };
+		36C877222B2A72410020AA76 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		36C877252B2A730A0020AA76 /* CharacterListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepository.swift; sourceTree = "<group>"; };
+		36C877272B2A731C0020AA76 /* CharacterListDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDomainErrorMapper.swift; sourceTree = "<group>"; };
+		36C877292B2A735D0020AA76 /* CharacterListDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListDomainError.swift; sourceTree = "<group>"; };
+		36C8772B2B2A74220020AA76 /* CharacterListRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepositoryType.swift; sourceTree = "<group>"; };
+		36C8772D2B2A751B0020AA76 /* CharacterListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListUseCase.swift; sourceTree = "<group>"; };
+		36C877302B2A75EF0020AA76 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		36C877322B2A76020020AA76 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		36C877342B2A781A0020AA76 /* CharacterListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +128,14 @@
 		36C876D32B2A68E00020AA76 /* Rick-and-Morty-VASS */ = {
 			isa = PBXGroup;
 			children = (
+				36C876FE2B2A69D50020AA76 /* Composition root */,
+				36C876FF2B2A69DF0020AA76 /* Extensions */,
+				36C877002B2A69EE0020AA76 /* UI */,
+				36C877012B2A69F60020AA76 /* Presentation */,
+				36C877022B2A6A010020AA76 /* Infrastructure */,
+				36C877032B2A6A0B0020AA76 /* Data */,
+				36C877042B2A6A120020AA76 /* Domain */,
 				36C876D42B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift */,
-				36C876D62B2A68E00020AA76 /* ContentView.swift */,
 				36C876D82B2A68E10020AA76 /* Assets.xcassets */,
 				36C876DA2B2A68E10020AA76 /* Preview Content */,
 			);
@@ -125,6 +165,161 @@
 				36C876F12B2A68E10020AA76 /* Rick_and_Morty_VASSUITestsLaunchTests.swift */,
 			);
 			path = "Rick-and-Morty-VASSUITests";
+			sourceTree = "<group>";
+		};
+		36C876FE2B2A69D50020AA76 /* Composition root */ = {
+			isa = PBXGroup;
+			children = (
+				36C877342B2A781A0020AA76 /* CharacterListFactory.swift */,
+			);
+			path = "Composition root";
+			sourceTree = "<group>";
+		};
+		36C876FF2B2A69DF0020AA76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				36C877222B2A72410020AA76 /* Foundation+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		36C877002B2A69EE0020AA76 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				36C877302B2A75EF0020AA76 /* CharacterListView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		36C877012B2A69F60020AA76 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				36C877322B2A76020020AA76 /* CharacterListViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		36C877022B2A6A010020AA76 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				36C877062B2A6B1C0020AA76 /* Data */,
+				36C877072B2A6B200020AA76 /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		36C877032B2A6A0B0020AA76 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				36C8770D2B2A6C8C0020AA76 /* Cache */,
+				36C8770E2B2A6C930020AA76 /* Networking */,
+				36C8770F2B2A6CC90020AA76 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		36C877042B2A6A120020AA76 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				36C8770A2B2A6C530020AA76 /* Interfaces */,
+				36C8770B2B2A6C590020AA76 /* Use cases */,
+				36C8770C2B2A6C640020AA76 /* Entities */,
+				36C877292B2A735D0020AA76 /* CharacterListDomainError.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		36C877062B2A6B1C0020AA76 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		36C877072B2A6B200020AA76 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				36C877082B2A6BA40020AA76 /* URLSessionRequestMaker.swift */,
+				36C877182B2A6EB60020AA76 /* URLSessionHTTPClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		36C8770A2B2A6C530020AA76 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				36C8772B2B2A74220020AA76 /* CharacterListRepositoryType.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		36C8770B2B2A6C590020AA76 /* Use cases */ = {
+			isa = PBXGroup;
+			children = (
+				36C8772F2B2A75290020AA76 /* Character List */,
+			);
+			path = "Use cases";
+			sourceTree = "<group>";
+		};
+		36C8770C2B2A6C640020AA76 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				36C877202B2A6FCE0020AA76 /* CharactersListResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		36C8770D2B2A6C8C0020AA76 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		36C8770E2B2A6C930020AA76 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				36C877102B2A6CE00020AA76 /* Characters List Data Source */,
+				36C8771A2B2A6EF40020AA76 /* HTTPClient.swift */,
+				36C877122B2A6DA00020AA76 /* Endpoint.swift */,
+				36C877142B2A6DDA0020AA76 /* HTTPMethod.swift */,
+				36C877162B2A6DFC0020AA76 /* HTTPClientError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		36C8770F2B2A6CC90020AA76 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				36C877242B2A72EA0020AA76 /* Characters List Repository */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		36C877102B2A6CE00020AA76 /* Characters List Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				36C8771C2B2A6F7A0020AA76 /* APICharactersListDataSourceType.swift */,
+				36C8771E2B2A6F820020AA76 /* APICharactersListDataSource.swift */,
+			);
+			path = "Characters List Data Source";
+			sourceTree = "<group>";
+		};
+		36C877242B2A72EA0020AA76 /* Characters List Repository */ = {
+			isa = PBXGroup;
+			children = (
+				36C877252B2A730A0020AA76 /* CharacterListRepository.swift */,
+				36C877272B2A731C0020AA76 /* CharacterListDomainErrorMapper.swift */,
+			);
+			path = "Characters List Repository";
+			sourceTree = "<group>";
+		};
+		36C8772F2B2A75290020AA76 /* Character List */ = {
+			isa = PBXGroup;
+			children = (
+				36C8772D2B2A751B0020AA76 /* CharacterListUseCase.swift */,
+			);
+			path = "Character List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +452,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36C876D72B2A68E00020AA76 /* ContentView.swift in Sources */,
+				36C877212B2A6FCE0020AA76 /* CharactersListResponse.swift in Sources */,
+				36C877262B2A730A0020AA76 /* CharacterListRepository.swift in Sources */,
+				36C877232B2A72410020AA76 /* Foundation+Extension.swift in Sources */,
+				36C8772C2B2A74220020AA76 /* CharacterListRepositoryType.swift in Sources */,
+				36C877332B2A76020020AA76 /* CharacterListViewModel.swift in Sources */,
+				36C877152B2A6DDA0020AA76 /* HTTPMethod.swift in Sources */,
+				36C877352B2A781A0020AA76 /* CharacterListFactory.swift in Sources */,
+				36C8771F2B2A6F820020AA76 /* APICharactersListDataSource.swift in Sources */,
 				36C876D52B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift in Sources */,
+				36C8772A2B2A735D0020AA76 /* CharacterListDomainError.swift in Sources */,
+				36C8772E2B2A751B0020AA76 /* CharacterListUseCase.swift in Sources */,
+				36C877172B2A6DFC0020AA76 /* HTTPClientError.swift in Sources */,
+				36C8771D2B2A6F7A0020AA76 /* APICharactersListDataSourceType.swift in Sources */,
+				36C8771B2B2A6EF40020AA76 /* HTTPClient.swift in Sources */,
+				36C877312B2A75EF0020AA76 /* CharacterListView.swift in Sources */,
+				36C877132B2A6DA00020AA76 /* Endpoint.swift in Sources */,
+				36C877092B2A6BA40020AA76 /* URLSessionRequestMaker.swift in Sources */,
+				36C877192B2A6EB60020AA76 /* URLSessionHTTPClient.swift in Sources */,
+				36C877282B2A731C0020AA76 /* CharacterListDomainErrorMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
