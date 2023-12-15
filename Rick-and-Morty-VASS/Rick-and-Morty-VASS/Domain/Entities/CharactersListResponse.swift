@@ -7,19 +7,20 @@
 
 import Foundation
 
-struct CharacterList: Codable {
+struct CharacterList: Hashable, Codable {
     let info: Info
     let results: [Character]
 }
 
-struct Info: Codable {
+struct Info: Hashable, Codable {
     let count: Int
     let pages: Int
     let next: String
     let prev: String?
 }
 
-struct Character: Codable {
+struct Character: Hashable, Codable, Identifiable {
+    
     let id: Int
     let name: String
     let status: String
@@ -34,12 +35,12 @@ struct Character: Codable {
     let created: String
 }
 
-struct OriginCharacter: Codable {
+struct OriginCharacter: Hashable, Codable {
     let name: String
     let url: String
 }
 
-struct LocationCharacter: Codable {
+struct LocationCharacter: Hashable, Codable {
     let name: String
     let url: String
 }

@@ -17,16 +17,23 @@ struct CharacterListView: View {
     
     var body: some View {
         VStack {
-            Text("Rick & Morty Characters")
-            
             if characterListViewModel.showLoadingSpinner {
                 ProgressView()
                     .progressViewStyle(.circular)
             } else {
-                List {
-                    ForEach(characterListViewModel.characterList, id: \.id) { character in
-                        Text(character.name)
+                NavigationStack {
+                    List(characterListViewModel.characterList) { character in
+                        NavigationLink(destination: CharacterDetailView()) {
+                            CharacterItem(character: character)
+                            .listRowBackground(Color.clear)
+                            .listRowSeparator(.hidden)
+                            .padding(.bottom)
+                        }
                     }
+                    .listStyle(.plain)
+                    .navigationTitle("Rick & Morty")
+                    .navigationBarTitleDisplayMode(.automatic)
+                    .padding(.top, 20)
                 }
             }
         }
