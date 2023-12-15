@@ -20,20 +20,25 @@ struct CharacterListView: View {
             if characterListViewModel.showLoadingSpinner {
                 ProgressView()
                     .progressViewStyle(.circular)
+                    .foregroundStyle(Color(colorName: .mainText))
             } else {
-                NavigationStack {
+                NavigationView {
                     List(characterListViewModel.characterList) { character in
-                        NavigationLink(destination: CharacterDetailView()) {
+                        ZStack(alignment: .leading) {
+                            NavigationLink(destination: CharacterDetailView(character: character)) {
+                                EmptyView()
+                            }
+                            .opacity(0)
                             CharacterItem(character: character)
-                            .listRowBackground(Color.clear)
-                            .listRowSeparator(.hidden)
-                            .padding(.bottom)
                         }
+                        .listRowSpacing(.infinity)
+                        .listRowSeparator(.hidden)
                     }
                     .listStyle(.plain)
                     .navigationTitle("Rick & Morty")
                     .navigationBarTitleDisplayMode(.automatic)
-                    .padding(.top, 20)
+                    .scrollIndicators(.hidden)
+                    .padding(-5)
                 }
             }
         }
