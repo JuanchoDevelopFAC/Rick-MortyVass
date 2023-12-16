@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CharacterListUseCaseType {
-    func execute() async -> Result<CharacterList, CharacterListDomainError>
+    func execute() async -> Result<[Character], CharacterListDomainError>
 }
 
 class CharacterListUseCase: CharacterListUseCaseType {
@@ -19,7 +19,7 @@ class CharacterListUseCase: CharacterListUseCaseType {
         self.repository = repository
     }
     
-    func execute() async -> Result<CharacterList, CharacterListDomainError> {
+    func execute() async -> Result<[Character], CharacterListDomainError> {
         let result = await repository.getCharacterList()
         
         guard let characterList = try? result.get() else {

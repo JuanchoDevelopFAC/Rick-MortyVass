@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SearchCharacterListUseCaseType {
-    func execute(characterName: String) async -> Result<CharacterList, CharacterListDomainError>
+    func execute(characterName: String) async -> Result<[Character], CharacterListDomainError>
 }
 
 class SearchCharacterListUseCase: SearchCharacterListUseCaseType {
@@ -19,7 +19,7 @@ class SearchCharacterListUseCase: SearchCharacterListUseCaseType {
         self.repository = repository
     }
     
-    func execute(characterName: String) async -> Result<CharacterList, CharacterListDomainError> {
+    func execute(characterName: String) async -> Result<[Character], CharacterListDomainError> {
         let result = await repository.search(characterName: characterName)
         
         guard let characterList = try? result.get() else {
@@ -28,6 +28,6 @@ class SearchCharacterListUseCase: SearchCharacterListUseCaseType {
             }
             return .failure(error)
         }
-        return .success(characterList)
+        return .success(characterList.results)
     }
 }

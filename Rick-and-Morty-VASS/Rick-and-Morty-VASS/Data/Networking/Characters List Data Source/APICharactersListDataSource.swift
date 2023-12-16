@@ -15,7 +15,7 @@ class APICharactersListDataSource: APICharactersListDataSourceType {
         self.httpClient = httpClient
     }
     
-    func getCharactersList() async -> Result<CharacterList, HTTPClientError> {
+    func getCharactersList() async -> Result<[Character], HTTPClientError> {
         
         let endpoint: Endpoint = Endpoint(
             path: "character",
@@ -33,7 +33,7 @@ class APICharactersListDataSource: APICharactersListDataSourceType {
             return .failure(.parsingError)
         }
 
-        return .success(charactersList)
+        return .success(charactersList.results)
     }
     
     private func handleError(error: HTTPClientError?) -> HTTPClientError {

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol APICharactersListDataSourceType {
-    func getCharactersList() async -> Result<CharacterList, HTTPClientError>
+    func getCharactersList() async -> Result<[Character], HTTPClientError>
 }

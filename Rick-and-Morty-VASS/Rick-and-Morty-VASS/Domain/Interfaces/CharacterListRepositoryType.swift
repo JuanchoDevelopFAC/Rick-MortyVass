@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CharacterListRepositoryType {
-    func getCharacterList() async -> Result<CharacterList, CharacterListDomainError>
+    func getCharacterList() async -> Result<[Character], CharacterListDomainError>
 }

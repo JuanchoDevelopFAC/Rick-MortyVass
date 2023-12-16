@@ -37,7 +37,7 @@ class CharacterListViewModel: ObservableObject {
                     return
                 }
                 showLoadingSpinner = false
-                characterList = characterListResponse.results
+                characterList = characterListResponse
             case .failure(let error):
                 showAlert = true
                 textError = error.errorCharacterListDomainDescription
@@ -57,7 +57,7 @@ class CharacterListViewModel: ObservableObject {
         }
     }
     
-    private func handleResult(_ result: Result<CharacterList, CharacterListDomainError>) {
+    private func handleResult(_ result: Result<[Character], CharacterListDomainError>) {
         switch result {
         case .success:
             let characterListResult = try? result.get()
@@ -67,7 +67,7 @@ class CharacterListViewModel: ObservableObject {
                 return
             }
             showLoadingSpinner = false
-            characterList = characterListResponse.results
+            characterList = characterListResponse
         case .failure(let error):
             showLoadingSpinner = false
             switch error {
