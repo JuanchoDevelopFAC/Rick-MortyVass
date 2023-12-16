@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CharacterListView: View {
     @ObservedObject private var characterListViewModel: CharacterListViewModel
+    @State private var searchCharacter: String = ""
     
     init(characterListViewModel: CharacterListViewModel) {
         self.characterListViewModel = characterListViewModel
@@ -22,24 +23,32 @@ struct CharacterListView: View {
                     .progressViewStyle(.circular)
                     .foregroundStyle(Color(colorName: .mainText))
             } else {
-                NavigationView {
-                    List(characterListViewModel.characterList) { character in
-                        ZStack(alignment: .leading) {
-                            NavigationLink(destination: CharacterDetailView(character: character)) {
-                                EmptyView()
+                NavigationStack {
+                    if characterListViewModel.characterList.isEmpty {
+                        EmptyListView()
+                    } else {
+                        List(characterListViewModel.characterList) { character in
+                            ZStack(alignment: .leading) {
+                                NavigationLink(destination: CharacterDetailView(character: character)) {
+                                    EmptyView()
+                                }
+                                .opacity(0)
+                                CharacterItem(character: character)
                             }
-                            .opacity(0)
-                            CharacterItem(character: character)
+                            .listRowBackground(Color.clear)
+                            .listRowSpacing(.infinity)
+                            .listRowSeparator(.hidden)
                         }
-                        .listRowSpacing(.infinity)
-                        .listRowSeparator(.hidden)
+                        .listStyle(.plain)
+                        .navigationTitle("Rick & Morty")
+                        .navigationBarTitleDisplayMode(.automatic)
+                        .scrollIndicators(.hidden)
                     }
-                    .listStyle(.plain)
-                    .navigationTitle("Rick & Morty")
-                    .navigationBarTitleDisplayMode(.automatic)
-                    .scrollIndicators(.hidden)
-                    .padding(-5)
                 }
+                .searchable(text: $searchCharacter)
+                    .onChange(of: searchCharacter, {_, newValue in
+                        characterListViewModel.search(characterName: newValue)
+                    })
             }
         }
         .onAppear {

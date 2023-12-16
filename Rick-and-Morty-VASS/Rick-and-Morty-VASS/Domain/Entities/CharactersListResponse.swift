@@ -15,7 +15,7 @@ struct CharacterList: Hashable, Codable {
 struct Info: Hashable, Codable {
     let count: Int
     let pages: Int
-    let next: String
+    let next: String?
     let prev: String?
 }
 

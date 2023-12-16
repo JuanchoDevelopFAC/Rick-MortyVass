@@ -17,9 +17,10 @@ struct CharacterItem: View {
     
     var cardSection: some View {
         Rectangle()
-            .frame(width: .infinity, height: 150)
-            .foregroundStyle(Color(colorName: .cardBg))
+            .frame(height: 150)
+            .clipped()
             .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            .foregroundStyle(Color(colorName: .cardBg))
     }
     
     var characterImage: some View {

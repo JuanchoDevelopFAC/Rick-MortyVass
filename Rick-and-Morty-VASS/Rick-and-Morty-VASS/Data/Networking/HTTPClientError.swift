@@ -7,13 +7,14 @@
 
 import Foundation
 
-enum HTTPClientError: Error {
+enum HTTPClientError: Error, Codable {
     case internetConnection
     case serverError(String)
     case generic
     case parsingError
     case badURL
     case responseError
+    case emptyList
     
     var errorUserDescription: String {
         switch self {
@@ -29,10 +30,8 @@ enum HTTPClientError: Error {
             return "The URL provided is invalid"
         case .responseError:
             return "Sorry, the request could not be completed"
+        case .emptyList:
+            return "List empty"
         }
     }
-}
-
-struct ResponseServerError: Codable {
-    let message: String
 }
