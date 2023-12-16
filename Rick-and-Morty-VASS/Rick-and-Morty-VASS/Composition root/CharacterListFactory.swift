@@ -24,7 +24,17 @@ final class CharacterListFactory {
     private static func createRepository() -> CharacterListRepositoryType {
         return CharacterListRepository(
             apiCharacterListDataSource: createDataSource(),
-            errorMapper: CharacterListDomainErrorMapper())
+            errorMapper: CharacterListDomainErrorMapper(),
+            cacheDataSource: createCacheDataSource()
+        )
+    }
+    
+    private static func createCacheDataSource() -> CacheCharacterListDataSourceType {
+        StrategyCacheCharacterList(temporalCache: InMemoryCacheCharacterListDataSource.shared, persistenceCache: createPersistenceDataSource())
+    }
+    
+    private static func createPersistenceDataSource() -> CacheCharacterListDataSourceType {
+        SwiftDataCacheCharacterListDataSource(container: SwiftDataContainer.shared)
     }
     
     private static func createDataSource() -> APICharactersListDataSourceType {
