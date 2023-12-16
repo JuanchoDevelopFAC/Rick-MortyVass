@@ -23,6 +23,7 @@
 		3641E9152B2E097400B51114 /* CacheCharacterListDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3641E9142B2E097400B51114 /* CacheCharacterListDataSourceType.swift */; };
 		3641E9172B2E098C00B51114 /* InMemoryCacheCharacterListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3641E9162B2E098C00B51114 /* InMemoryCacheCharacterListDataSource.swift */; };
 		3641E9192B2E099A00B51114 /* StrategyCacheCharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3641E9182B2E099A00B51114 /* StrategyCacheCharacterList.swift */; };
+		3641E91F2B2E261800B51114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3641E91E2B2E261800B51114 /* LaunchScreen.storyboard */; };
 		36C876D52B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C876D42B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift */; };
 		36C876D92B2A68E10020AA76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C876D82B2A68E10020AA76 /* Assets.xcassets */; };
 		36C876DC2B2A68E10020AA76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36C876DB2B2A68E10020AA76 /* Preview Assets.xcassets */; };
@@ -84,6 +85,7 @@
 		3641E9142B2E097400B51114 /* CacheCharacterListDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheCharacterListDataSourceType.swift; sourceTree = "<group>"; };
 		3641E9162B2E098C00B51114 /* InMemoryCacheCharacterListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryCacheCharacterListDataSource.swift; sourceTree = "<group>"; };
 		3641E9182B2E099A00B51114 /* StrategyCacheCharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrategyCacheCharacterList.swift; sourceTree = "<group>"; };
+		3641E91E2B2E261800B51114 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36C876D12B2A68E00020AA76 /* Rick-and-Morty-VASS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick-and-Morty-VASS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C876D42B2A68E00020AA76 /* Rick_and_Morty_VASSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_and_Morty_VASSApp.swift; sourceTree = "<group>"; };
 		36C876D82B2A68E10020AA76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				36C877362B2B776B0020AA76 /* Custom views */,
 				36C877302B2A75EF0020AA76 /* CharacterListView.swift */,
 				360FDC7E2B2BAF6D0062B8D2 /* CharacterDetailView.swift */,
+				3641E91E2B2E261800B51114 /* LaunchScreen.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3641E91F2B2E261800B51114 /* LaunchScreen.storyboard in Resources */,
 				36C876DC2B2A68E10020AA76 /* Preview Assets.xcassets in Resources */,
 				36C876D92B2A68E10020AA76 /* Assets.xcassets in Resources */,
 			);
@@ -729,11 +733,12 @@
 				DEVELOPMENT_TEAM = P34TF3795N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick & Morty";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -741,6 +746,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Juancho.Rick-and-Morty-VASS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -758,11 +766,12 @@
 				DEVELOPMENT_TEAM = P34TF3795N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rick & Morty";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -770,6 +779,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Juancho.Rick-and-Morty-VASS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
