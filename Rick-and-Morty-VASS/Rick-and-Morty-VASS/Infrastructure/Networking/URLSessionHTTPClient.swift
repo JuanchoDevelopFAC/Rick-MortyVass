@@ -36,10 +36,10 @@ class URLSessionHTTPClient: HTTPClient {
                     case 200, 201:
                         return .success(result.0)
                     case 400, 404, 500:
-                        guard let result = try? JSONDecoder().decode(ResponseServerError.self, from: result.0) else {
+                        guard let result = try? JSONDecoder().decode(HTTPClientError.self, from: result.0) else {
                                 return .failure(.parsingError)
                             }
-                        return .failure(.serverError(result.message))
+                    return .failure(.serverError(result.errorUserDescription))
                     default:
                         return .failure(.generic)
                 }
@@ -71,10 +71,10 @@ class URLSessionHTTPClient: HTTPClient {
                     case 200, 201:
                         return .success(result.0)
                     case 400, 404, 500:
-                        guard let result = try? JSONDecoder().decode(ResponseServerError.self, from: result.0) else {
+                        guard let result = try? JSONDecoder().decode(HTTPClientError.self, from: result.0) else {
                                 return .failure(.parsingError)
                             }
-                        return .failure(.serverError(result.message))
+                    return .failure(.serverError(result.errorUserDescription))
                     default:
                         return .failure(.generic)
                 }

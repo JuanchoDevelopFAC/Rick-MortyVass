@@ -14,7 +14,7 @@ final class CharacterListFactory {
     }
     
     private static func createViewModel() -> CharacterListViewModel {
-        return CharacterListViewModel(characterListUseCase: createUseCase())
+        return CharacterListViewModel(characterListUseCase: createUseCase(), searchCharacterListUseCase: createSearchUseCase())
     }
     
     private static func createUseCase() -> CharacterListUseCaseType {
@@ -29,6 +29,18 @@ final class CharacterListFactory {
     
     private static func createDataSource() -> APICharactersListDataSourceType {
         return APICharactersListDataSource(httpClient: createHTTPClient())
+    }
+    
+    private static func createSearchUseCase() -> SearchCharacterListUseCaseType {
+        return SearchCharacterListUseCase(repository: createSearchRepository())
+    }
+    
+    private static func createSearchRepository() -> SearchCharacterListRepositoryType {
+        return SearchCharacterListRepository(apiDataSource: createSearchDataSource(), errorMapper: CharacterListDomainErrorMapper())
+    }
+    
+    private static func createSearchDataSource() -> APISearchCharacterListDataSourceType {
+        return APISearchCharacterListDataSource(httpClient: createHTTPClient())
     }
     
     private static func createHTTPClient() -> URLSessionHTTPClient {

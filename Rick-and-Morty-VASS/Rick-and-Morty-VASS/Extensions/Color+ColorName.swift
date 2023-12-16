@@ -8,12 +8,13 @@
 import SwiftUI
 
 enum ColorName: String {
-    case cardBg = "CardBg"
+    case cardBg = "Cardbg"
     case mainText = "MainText"
     case secondaryText = "SecondaryText"
     case alive = "GreenAlive"
     case dead = "RedDead"
     case blackText = "BlackText"
+    case bgEmptyList = "BlackEmptyList"
     
     var colorName: String {
         return self.rawValue
